@@ -2,26 +2,26 @@
 
 @{
     ViewData["Title"] = "Inicio Productos";
-    var productos = Model;
+    
 }
 
 
 <h1 class="display-4">LISTA DE PRODUCTOS</h1>
 
-<button type="button" class="btn btn-dark mb-3" onclick="location.href='@Url.Action("Create", "Producto")'">Crear</button>
+<button type="button" class="btn btn-dark mb-3" onclick="location.href='@Url.Action("Create", "Alimento")'">Crear</button>
 
 <table class="table">
     <thead class="thead-light">
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Descripcion</th>
+            <th scope="col">Valor</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var producto in productos)
+        @foreach (var producto in Model)
         {
             <tr>
                 <td>@producto.IdProducto</td>

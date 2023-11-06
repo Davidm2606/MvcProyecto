@@ -1,0 +1,38 @@
+﻿@model Platos
+@{
+    ViewData["Title"] = "Visualizar Platos";
+}
+
+
+<div>
+    <h1 class="display-4">VISUALIZAR PLATOS</h1>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input asp-for="Nombre" class="form-control" placeholder="Ingrese un nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Ingredientes</label>
+            <input asp-for="Ingredientes" class="form-control" placeholder="Ingrese los ingredientes">
+        </div>
+
+        <div class="mb-3">
+            <label>Cantidad Ingrediente</label>
+            <input asp-for="Cantidad" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Precio</label>
+            <input asp-for="Precio" class="form-control" placeholder="Ingrese el precio">
+        </div>
+
+        <div class="form-group">
+            <a asp-action="Index2" class="btn btn-warning">Volver</a>
+        </div>
+
+    </form>
+
+</div>

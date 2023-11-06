@@ -1,0 +1,44 @@
+﻿@model List<Platos>;
+
+@{
+    ViewData["Title"] = "Inicio Platos";
+
+}
+
+
+<h1 class="display-4">LISTA DE PLATOS</h1>
+
+<button type="button" class="btn btn-dark mb-3" onclick="location.href='@Url.Action("Create", "Plato")'">Crear</button>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ingredientes</th>
+            <th scope="col">C. Ingredientes</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.IdPlato</td>
+                <td>@producto.Nombre</td>
+                <td>@producto.Ingredientes</td>
+                <td>@producto.Cantidad</td>
+                <td>@producto.Precio</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a asp-action="Details" asp-route-IdPlato="@producto.IdPlato" class="btn btn-primary me-2"><i class="bi bi-eye-fill"></i></a>
+                        <a asp-action="Edit" asp-route-IdPlato="@producto.IdPlato" class="btn btn-warning me-2"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-action="Delete" asp-route-IdPlato="@producto.IdPlato" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

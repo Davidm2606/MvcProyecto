@@ -1,0 +1,35 @@
+﻿@model Empleados
+@{
+    ViewData["Title"] = "Crear Empleados";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form method="post">
+    <div class="mb-3">
+        <label>Cedula</label>
+        <input asp-for="Cedula" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Apellido</label>
+        <input asp-for="Apellido" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Edad</label>
+        <input asp-for="Edad" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a asp-action="Index1" class="btn btn-primary">Regresar</a>
+    </div>
+</form>
+
+<p>Esta es la vista para crear empleados.</p>
+

@@ -1,6 +1,6 @@
-﻿@model Alimento
+﻿@model Empleados
 @{
-    ViewData["Title"] = "Crear Productos";
+    ViewData["Title"] = "Editar Productos";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -11,20 +11,19 @@
     </div>
 
     <div class="mb-3">
-        <label>Descripcion</label>
-        <input asp-for="Valor" class="form-control">
+        <label>Apellido</label>
+        <input asp-for="Apellido" class="form-control">
     </div>
 
     <div class="mb-3">
-        <label>cantidad</label>
-        <input asp-for="Cantidad" class="form-control">
+        <label>Edad</label>
+        <input asp-for="Edad" class="form-control">
     </div>
 
     <div class="mb-3">
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a asp-action="Index" class="btn btn-primary">Regresar</a>
+        <a asp-action="Index1" class="btn btn-primary">Regresar</a>
     </div>
 </form>
 
-<p>Esta es la vista para crear productos.</p>
-
+<p>Esta es la vista para editar productos.</p>
